@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "blog.apps.BlogConfig", # new
+    "accounts.apps.AccountsConfig", # new
 ]
 
 MIDDLEWARE = [
@@ -116,6 +117,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+LOGOUT_REDIRECT_URL = "home" # new
+LOGIN_REDIRECT_URL = "home" # new
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"] # new
 
